@@ -1,7 +1,7 @@
-# Database Integration Guide for Studio Pro
+# Database Integration Guide for VIVID
 
 ## Overview
-This guide provides comprehensive instructions for integrating a real database with your Studio Pro application, replacing the current sample data with live data from your fitness studio.
+This guide provides comprehensive instructions for integrating a real database with your VIVID application, replacing the current sample data with live data from your fitness studio.
 
 ## Table of Contents
 1. [Database Schema Design](#database-schema-design)
@@ -854,4 +854,4 @@ npm run dev
 - **Prisma**: Alternative ORM for type-safe database operations
 - **Supabase**: Hosted PostgreSQL with built-in auth and real-time features
 
-This guide provides a complete foundation for integrating a real database with your Studio Pro application. Customize the schema and seeding data according to your specific business needs.
+This guide provides a complete foundation for integrating a real database with your VIVID application. Customize the schema and seeding data according to your specific business needs.

@@ -1,4 +1,4 @@
-# GitHub Copilot Instructions for Studio Pro
+# GitHub Copilot Instructions for VIVID
 
 ## Project Overview
 This is a boutique fitness studio management application built with React, Vite, and Tailwind CSS. The application provides a comprehensive business management solution including authentication, analytics dashboard, CRM, and marketing tools.

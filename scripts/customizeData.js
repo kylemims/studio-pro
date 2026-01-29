@@ -194,9 +194,7 @@ const generateSampleData = () => {
   const leadsWithIds = leads.map((lead, index) => ({
     id: index + 1,
     ...lead,
-    createdAt: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000)
-      .toISOString()
-      .split("T")[0],
+    createdAt: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
   }));
 
   const salesWithIds = recentSales.map((sale, index) => ({
@@ -415,7 +413,7 @@ export const AuthProvider = ({ children }) => {
 
 // Main execution
 const main = () => {
-  console.log("🚀 Customizing Studio Pro data...");
+  console.log("🚀 Customizing VIVID data...");
 
   try {
     // Update sample data

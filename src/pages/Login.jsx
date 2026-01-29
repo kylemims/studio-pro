@@ -39,12 +39,8 @@ const Login = () => {
           <div className="mx-auto h-12 w-12 flex items-center justify-center rounded-full bg-studio-teal">
             <span className="text-white font-bold text-xl">SP</span>
           </div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-studio-dark">
-            Sign in to Studio Pro
-          </h2>
-          <p className="mt-2 text-center text-sm text-studio-teal">
-            Manage your boutique fitness studio
-          </p>
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-studio-dark">Sign in to VIVID</h2>
+          <p className="mt-2 text-center text-sm text-studio-teal">Manage your boutique fitness studio</p>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           {error && (
@@ -95,9 +91,7 @@ const Login = () => {
           </div>
 
           <div className="text-center">
-            <div className="text-sm text-studio-teal">
-              Demo credentials: admin@studio.com / password
-            </div>
+            <div className="text-sm text-studio-teal">Demo credentials: admin@yourstudio.com / password</div>
           </div>
         </form>
       </div>

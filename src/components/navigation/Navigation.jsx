@@ -31,7 +31,7 @@ const Navigation = () => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <h1 className="text-xl font-bold text-studio-mint">Studio Pro</h1>
+                <h1 className="text-xl font-bold text-studio-mint">VIVID</h1>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
@@ -56,7 +56,7 @@ const Navigation = () => {
             </div>
             <div className="flex items-center">
               <div className="flex items-center space-x-4">
-                <span className="text-sm text-studio-light">Welcome, {user.name}</span>
+                <span className="text-sm text-studio-light">Welcome, Evenflow Yoga</span>
                 <button
                   onClick={logout}
                   className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-studio-light hover:bg-studio-blue hover:text-white">
@@ -74,7 +74,7 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <h1 className="text-xl font-bold text-studio-mint">Studio Pro</h1>
+              <h1 className="text-xl font-bold text-studio-mint">VIVID</h1>
             </div>
             <div className="flex items-center">
               <button

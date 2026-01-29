@@ -3,11 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { dashboardData } from "../data/sampleData";
 import Card from "../components/ui/Card";
-import {
-  RevenueChart,
-  ClassAttendanceChart,
-  MemberDemographicsChart,
-} from "../components/ui/Charts";
+import { RevenueChart, ClassAttendanceChart, MemberDemographicsChart } from "../components/ui/Charts";
 import { TrendingUp, Users, DollarSign, Calendar, Target, Award } from "lucide-react";
 
 const Dashboard = () => {
@@ -48,7 +44,7 @@ const Dashboard = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-studio-dark">Dashboard</h1>
-        <p className="mt-2 text-studio-teal">Welcome back, {user.name}!</p>
+        <p className="mt-2 text-studio-teal">Welcome back, Evenflow Yoga!</p>
       </div>
 
       {/* KPI Cards */}
@@ -118,17 +114,13 @@ const Dashboard = () => {
             <h3 className="text-lg font-semibold text-studio-dark mb-4">Top Performing Classes</h3>
             <div className="space-y-4">
               {topClasses.map((classItem, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-between p-3 bg-studio-light rounded-lg">
+                <div key={index} className="flex items-center justify-between p-3 bg-studio-light rounded-lg">
                   <div>
                     <p className="font-medium text-studio-dark">{classItem.name}</p>
                     <p className="text-sm text-gray-600">{classItem.instructor}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-medium text-studio-teal">
-                      {classItem.avgAttendance} avg
-                    </p>
+                    <p className="text-sm font-medium text-studio-teal">{classItem.avgAttendance} avg</p>
                     <p className="text-xs text-gray-500">⭐ {classItem.rating}</p>
                   </div>
                 </div>
@@ -165,9 +157,7 @@ const Dashboard = () => {
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-studio-dark">
                     {sale.customerName}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                    {sale.service}
-                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{sale.service}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-studio-teal font-semibold">
                     ${sale.amount}
                   </td>

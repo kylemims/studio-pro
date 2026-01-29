@@ -1,4 +1,4 @@
-# Studio Pro - Boutique Fitness Studio Management
+# VIVID - Boutique Fitness Studio Management
 
 A modern, responsive business management application for boutique fitness studios built with React, Vite, and Tailwind CSS.
 

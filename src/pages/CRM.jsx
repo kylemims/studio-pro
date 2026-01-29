@@ -62,8 +62,7 @@ const CRM = () => {
             <p className="text-sm text-gray-600">{member.membershipType} Member</p>
           </div>
         </div>
-        <span
-          className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(member.status)}`}>
+        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(member.status)}`}>
           {member.status}
         </span>
       </div>
@@ -78,9 +77,7 @@ const CRM = () => {
         </div>
         <div className="flex items-center space-x-2">
           <Calendar className="h-4 w-4 text-gray-500" />
-          <span className="text-gray-700">
-            Last visit: {new Date(member.lastVisit).toLocaleDateString()}
-          </span>
+          <span className="text-gray-700">Last visit: {new Date(member.lastVisit).toLocaleDateString()}</span>
         </div>
       </div>
       <div className="mt-4 pt-4 border-t border-gray-200">
@@ -104,8 +101,7 @@ const CRM = () => {
             <p className="text-sm text-gray-600">{lead.interest}</p>
           </div>
         </div>
-        <span
-          className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(lead.status)}`}>
+        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(lead.status)}`}>
           {lead.status}
         </span>
       </div>
@@ -120,9 +116,7 @@ const CRM = () => {
         </div>
         <div className="flex items-center space-x-2">
           <Calendar className="h-4 w-4 text-gray-500" />
-          <span className="text-gray-700">
-            Created: {new Date(lead.createdAt).toLocaleDateString()}
-          </span>
+          <span className="text-gray-700">Created: {new Date(lead.createdAt).toLocaleDateString()}</span>
         </div>
       </div>
       <div className="mt-4 pt-4 border-t border-gray-200">
@@ -138,7 +132,7 @@ const CRM = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-studio-dark">CRM</h1>
-        <p className="mt-2 text-studio-teal">Manage your customers and leads</p>
+        <p className="mt-2 text-studio-teal">Manage your clients and leads</p>
       </div>
 
       {/* Tab Navigation */}

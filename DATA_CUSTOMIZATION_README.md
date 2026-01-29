@@ -1,4 +1,4 @@
-# 📊 Studio Pro Data Customization
+# 📊 VIVID Data Customization
 
 ## Quick Start - Update Your Data
 

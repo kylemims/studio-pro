@@ -1,74 +1,70 @@
-import { createContext, useContext, useState, useEffect } from 'react'
+import { createContext, useContext, useState, useEffect } from "react";
 
-const AuthContext = createContext()
+const AuthContext = createContext();
 
 export const useAuth = () => {
-  const context = useContext(AuthContext)
+  const context = useContext(AuthContext);
   if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider')
+    throw new Error("useAuth must be used within an AuthProvider");
   }
-  return context
-}
+  return context;
+};
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Check for stored auth token
-    const token = localStorage.getItem('authToken')
+    const token = localStorage.getItem("authToken");
     if (token) {
       // In a real app, you would validate the token with your backend
-      setUser({ 
-        id: '1', 
-        name: 'Your Name', 
-        email: 'admin@yourstudio.com',
-        role: 'admin'
-      })
+      setUser({
+        id: "1",
+        name: "Your Name",
+        email: "admin@yourstudio.com",
+        role: "admin",
+      });
     }
-    setLoading(false)
-  }, [])
+    setLoading(false);
+  }, []);
 
   const login = async (email, password) => {
     try {
-      setLoading(true)
+      setLoading(true);
       // In a real app, you would make an API call here
       // For demo purposes, we'll simulate a successful login
-      if (email === 'admin@yourstudio.com' && password === 'password') {
-        const userData = { 
-          id: '1', 
-          name: 'Your Name', 
-          email: 'admin@yourstudio.com',
-          role: 'admin'
-        }
-        setUser(userData)
-        localStorage.setItem('authToken', 'demo-token')
-        return { success: true }
+      if (email === "admin@yourstudio.com" && password === "password") {
+        const userData = {
+          id: "1",
+          name: "Your Name",
+          email: "admin@yourstudio.com",
+          role: "admin",
+        };
+        setUser(userData);
+        localStorage.setItem("authToken", "demo-token");
+        return { success: true };
       } else {
-        return { success: false, error: 'Invalid credentials' }
+        return { success: false, error: "Invalid credentials" };
       }
     } catch (error) {
-      return { success: false, error: 'Login failed' }
+      return { success: false, error: "Login failed" };
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const logout = () => {
-    setUser(null)
-    localStorage.removeItem('authToken')
-  }
+    setUser(null);
+    localStorage.removeItem("authToken");
+  };
 
   const value = {
     user,
     login,
     logout,
-    loading
-  }
+    loading,
+  };
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  )
-}
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+};
